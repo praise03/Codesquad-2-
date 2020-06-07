@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title>Codesquad</title>
+</head>
+<body>
+	<nav class="top-bar">
+		<div class="image-nav">
+			<img src="188750861.jpg">
+		
+		<ul class="navbar">
+			<li class="active">
+			<a href="sublime.html">Home</a>
+			</li>
+			<li>
+			<a href="#about">About</a>
+			</li>
+			<li>
+			<a href="#gallery">Gallery</a>
+			</li>
+			<li>
+			<a href="#contact">Contact</a>
+			</li>
+		</ul>
+		</div>	
+	</nav>
+	<div class="welcome">
+		<h1>Welcome to the official website for I-tech Limited.</h1>
+		<h2>(ITL)</h2>
+		<h3>Nigeria</h3>
+	</div>
+	<div class="apple">
+		<img src="apple.jpg">
+	</div>
+	<a id="about"></a>
+	<div class="focus">
+		<h1>Our Focus</h1>
+		<p>Through consistent and professional exposure, ITL provides an excellent foundation for Computer Scientists, <span id="dots">...</span>
+		<span id="more">Engineers and any IT related disciplines in Nigeria. Over the years, ITL has given to the economy and society the finest professionals in Information and Communications Technology ICT and is dedicated to doing even more in future. </span></p>
+		<button onclick="myFunction()" id="myBtn">Read more</button>
+		<script>
+			function myFunction() {
+				var dots = document.getElementById("dots");
+				var moreText = document.getElementById("more");
+				var btnText = document.getElementById("myBtn");
+
+				if (dots.style.display === "none"){
+					dots.style.display = "inline";
+					btnText.innerHTML = "Read more";
+					moreText.style.display = "none";
+					}
+				else {
+					dots.style.display = "none";
+					btnText.innerHTML = "Show less";
+					moreText.style.display = "inline";
+				}
+			}
+		</script>
+
+	</div>
+		<div class="apple">
+		<img src="pcalone.jpg">
+	</div>
+	<div class="focus">
+		<h1>Aims and Objectives</h1>
+		<p>NACOSS aims to re–orient the Nigerian youth and project the IT profession through Seminars, <span id="dots_2">...</span>
+		<span id="more_2">Lectures, Symposia, Workshops and other related activities. The intention appears to be the active and purposeful promotion of the study of IT and other positive forms of IT knowledge acquisition.</span></p>
+		<button onclick="myFunction2()" id="myBtn_2">Read more</button>
+		<script>
+			function myFunction2() {
+				var dots = document.getElementById("dots_2");
+				var moreText = document.getElementById("more_2");
+				var btnText = document.getElementById("myBtn_2");
+
+				if (dots.style.display === "none"){
+					dots.style.display = "inline";
+					btnText.innerHTML = "Read more";
+					moreText.style.display = "none";
+					}
+				else {
+					dots.style.display = "none";
+					btnText.innerHTML = "Show less";
+					moreText.style.display = "inline";
+				}
+			}
+		</script>
+
+	</div>
+	
+	<div class="clear"></div>	
+	<a id="gallery"></a>
+	<div class="scroll">
+		<h1>Our Team</h1>
+		<img class="mySlides" src="images (2).jpg">
+		<img class="mySlides" src="images (4).jpg">
+		<img class="mySlides" src="images (5).jpg">
+		
+		<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="next" onclick="plusDivs(+1)">&#10095;</button>
+        <script type="text/javascript">
+        	var slideIndex = 1;
+			showDivs(slideIndex);
+
+			function plusDivs(n) {showDivs(slideIndex += n);}
+
+			function showDivs(n) {
+  				var i;
+  				var x = document.getElementsByClassName("mySlides");
+  				if (n > x.length) {slideIndex = 1}
+  				if (n < 1) {slideIndex = x.length} ;
+  				for (i = 0; i < x.length; i++) {x[i].style.display = "none";}
+  				x[slideIndex-1].style.display = "block";
+  			}
+        </script>
+
+	</div>
+	<div class="clear"></div>
+	<a id="contact"></a>
+	<div class="contact" id="contact">
+		<h1>Contact Us</h1>
+		<form method="POST" action="">
+			<div class="form">
+				<label>Full Name</label>
+				<input type="text" name="Name" placeholder="Full Name">
+			</div>
+			<div class="form">
+				<label>Email Adress</label>
+				<input type="text" name="Email Adress" placeholder="E.g: JohnDoe@gmail.com">
+			</div>
+			<div class="form">
+				<label>Subject</label>
+				<input type="text" name="Subject" placeholder="Subject">
+			</div>
+			<div class="form">
+				<label>Message</label>
+				<textarea rows="8" name="Message" placeholder="Enter Your Message..."></textarea>
+			</div>
+			<button class="submit">Submit</button>
+		</form>
+	</div>
+	<footer>
+		<a href="">Instagram</a>
+		<a href="">Facebook</a>
+		<a href="">Twitter</a>
+		<p> 2019 | &copy Group 9. All rights reserved. </p>
+	</footer>
+ </body>
+</html>
