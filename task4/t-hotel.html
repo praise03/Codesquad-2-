@@ -1,0 +1,350 @@
+ <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="C:\Users\PRAISE\Videos\Web Development\Bootstrap\bootstrap-4.5.0-dist\fontawesome-free-5.13.1-web/css/all.css">
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style2.css">
+<!---55a8ae-->
+
+    <title>T-Hotel</title>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+	<nav class="navbar navbar-expand-md navbar-light">
+ 	<div class="container-fluid">
+		
+    <a class="navbar-brand" href="#"><img src="Logo.svg"></a>
+
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    	   <span class="navbar-toggler-icon"></span>
+  		</button>
+  	  
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    	
+      <ul class="navbar-nav ml-auto">
+      	<li class="nav-item">
+        	<a class="nav-link" href="#">Home</a>
+      	</li>
+      	
+        <li class="nav-item">
+        	<a class="nav-link" href=#room_and_rates>Rooms and Rates</a>
+      	</li>
+      	
+        <li class="nav-item">
+        	<a class="nav-link" href=#facilities>Facilities</a>
+      	</li>
+      	
+        <li class="nav-item">
+        	<a class="nav-link" href=#Contact_us>Contact Us</a>
+      	</li>
+      	
+        <li class="nav-item">
+        	<a class="nav-link" href=#gallery>Gallery</a>
+      	</li>
+    	</ul>
+  	  
+      </div>
+	</div>
+</nav>
+
+    <!-- CAROUSEL -->
+    <div class="container-fluid-carousel">
+      <div id="demo" class="carousel slide" data-ride="carousel">
+
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" ></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2" class="active"></li>
+        <li data-target="#demo" data-slide-to="3" ></li>
+        <li data-target="#demo" data-slide-to="4" ></li>
+        
+      </ul>
+
+      <!-- CAROUSEL CAPTION -->
+      <div class="carousel-caption" id="gallery">
+          <h1>EXPLORE OUR ROOMS</h1>
+            <button class="btn btn-lg ">BOOK NOW</button>
+        </div>
+
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        
+        <div class="carousel-item">
+          <img class="img-fluid" src="image(6).jpg" >
+        </div>
+        
+        <div class="carousel-item">
+          <img class="img-fluid" src="image(7).jpg" >
+        </div>
+        
+        <div class="carousel-item active ">
+          <img class="img-fluid" src="image(8).jpg">
+        </div>
+        
+        <div class="carousel-item">
+          <img class="img-fluid" src="images3.jpg" >
+        </div>
+        
+        <div class="carousel-item">
+          <img class="img-fluid" src="images (4).jpg" >
+        </div>
+      </div>
+      </div>
+      </div>
+      
+      <!-- RESERVATIONS -->
+      <div class="jumbotron">
+        <div class="row ml-5">
+        <div class="col-12"><h1>RESERVATION</h1></div>
+          
+          <!-- CHECK IN -->
+          <div class="col-xm-12 col-xl-2">
+            <label for="check-in">Check In</label>
+            <input type="date" id="check-in" name="check-in" class="fas fa-calendar">
+          </div>
+          
+          <!-- NIGHTS -->
+          <div class="col-xm-12 col-xl-1">
+            <label for="night">Night</label>
+            <select name="night" id="night" class="select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+          </div>
+          
+          <!-- CHECK OUT -->
+          <div class="col-xm-12 col-xl-2">
+            <label for="check-out">Check Out</label>
+              <input type="date" id="check-out" name="check-out" class="fas fa-calendar">
+            </div>
+          
+          <!-- ADULT -->
+          <div class="col-xm-12 col-xl-1">
+            <label for="adult">Adult</label>
+            <select name="adult" id="adult" class="select">
+                <option value="1">25</option>
+                <option value="2">1</option>
+                <option value="3">2</option>
+                <option value="4">3</option>
+                <option value="5">4</option>
+            </select>
+          </div>
+          
+          <!-- CHILDREN -->
+          <div class="col-xm-12 col-xl-1">
+            <label for="children">Children</label>
+            <select name="children" id="children" class="select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+          </div>
+          
+          <!-- CHECK-AVAILABILITY -->
+          <div class="col-xm-12 col-xl-4 ml-auto">
+            <button class="btn btn-lg">CHECK AVAILABLITY</button>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- ROOMS AND RATES -->
+
+      <div class="rr">
+      <div class="row" id="room_and_rates">
+        <div class="col-xl-10 col-sm-12">
+          <h1 class="rooms">ROOMS AND RATES</h1>
+        </div>
+        
+
+        <div class="col-xl-2 col-sm-12">
+          <button class="fas fa-arrow-circle-left"></button>
+          <button class="fas fa-arrow-circle-right"></button>
+        </div>
+        
+        <div class="col-12" style="text-align: center;">
+          <p class="lead">All rooms are equipped with: Free Wi-Fi, Large Smart Tv <br>
+          with 21 international stations with central air condition etc.</p>
+        </div> 
+       
+
+       
+       <div class="col-xl-6 col-sm-12 pt-5 pl-5" style="color: grey;" >
+         <img src="image(8).jpg" width="500px" height="300px">
+         <h3>Deluxe Rooms - One king bed</h3>
+         <h2>$10,000</h2>
+         <h5>Check details <i class="fas fa-arrow-right pl-3" style="font-size: 17px;">  </i></h5>
+       </div>
+       
+
+       <div class="col-xl-6 col-sm-12 pt-5 pl-5" style="color: grey;">
+         <img src="images3.jpg" width="500px" height="300px">
+         <h3>Standard Rooms - One king size bed</h3>
+         <h2>$20,000</h2>
+         <h5>Check details <i class="fas fa-arrow-right pl-3" style="font-size: 17px;"> </i></h5>
+       </div>
+       
+       </div>
+       </div>
+
+
+      <!-- FACILITIES -->
+
+      <h1 class="pt-3">FACILITIES</h1>
+      <div class="facilities">
+        <div class="row" id="facilities">
+
+          <div class="col-xl-4">
+            <img src="wine5 (1).png"><br>
+            <h3>Bar</h3>
+            <img src="massage.png"><br>
+            <h3>Spa/Wellness</h3>
+          </div>
+          
+          <div class="col-xl-4">
+            <img src="restaurant.png"><br>
+            <h3>Restaurant</h3>
+            <img src="tv.png"><br>
+            <h3>Cinema</h3>
+          </div>
+
+          <div class="col-xl-4">
+          <img src="swimming.png">
+          <h3>Pool</h3>
+          <img src="wifi.png">
+          <h3>Wifi</h3>
+            
+          </div>
+
+
+          
+        </div>
+      </div>
+
+      <!-- TESTIMONIALS -->
+
+      <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-10 col-sm-12">
+          <h1 class="rooms">TESTIMONIAL</h1>
+        </div>
+        
+        <!-- LEFT AND RIGHT ARROWS -->
+        <div class="col-xl-2 col-sm-12">
+          <div class="arrows">
+          <button class="fas fa-arrow-circle-left"></button>
+          <button class="fas fa-arrow-circle-right"></button>
+          </div>        
+        </div>
+        
+        <!-- TESTIMONIAL IMAGE AND BODY -->
+        <div class="col-xl-12 col-sm-12 testimonial">
+        <img src="Minato.jpg" class="rounded-circle mt-3" height="80px" width="80px" style="margin-left: 620px;">
+        </div>
+        <div class="col-xl-12">
+        <p class="lead test" style="margin-top: 0px;">T Hotel is a home away from home, it has a serene <br> environment, 24 hour power supply, free Wi-fi and <br>the facilitiess are top notch.</p>
+        </div>
+        <div class="col-xl-12">
+        <h5 style="text-align: center; font-style: italic; color: black !important ;">Innocent Tamunosiki, Traveller</h5>
+        </div>
+        </div>
+        </div>
+
+
+        <!-- CONTACT US -->
+        <div class="jumbotron mb-0">
+          <div class="row" id="Contact_us">
+            <div class="col-xl-12 col-sm-12">
+                <h2 class="contact">Contact Us</h2>
+            </div>
+
+            <!-- MAP -->
+            <div class="col-xl-6 col-sm-12"> 
+              <img class="contact-img" src="Untitled-1.jpg" height="400px">
+            </div>
+
+            <!-- CONTACT FORM -->
+            <div class="col-xl-5 col-sm-12 contact-form" style="background-color: #55a8ae;" >
+              <div class="input-contact pt-5">
+               <input type="textarea" name="Name" placeholder="Name" size="40">
+               <br>
+               <input type="textarea" name="Email" placeholder="Email" size="40">
+               <br>
+               <input style="padding: 20px;" type="textarea" rows name="Comments" placeholder="Comments" size="37">
+               <br>
+               <button class="send"> <h4 style="color:grey;">Send</h4>
+               </button>
+               </div>
+
+            </div>
+          </div>
+        </div>
+        
+        <!-- FOOTER -->
+        <div class="footer"  style="background-color: #55a8ae; color: white;">
+          <div class="row pl-5 pt-3">
+            <div class="col-xl-12">
+            <a class="navbar-brand" href="#"><img src="Logo.svg"></a>
+            </div>
+            <div class="col-xl-4">
+              <h3>Book Now</h3>
+              <p> 
+              <span class="fas fa-map-marker-alt pr-3"> </span> No 11 Somiari Ama Port Harcourt <br>Rivers State, Nigeria</p>
+              <p> 
+              <span class="fas fa-phone-alt pr-3"> </span> +234864128836</p>
+              <p> 
+              <span class="fas fa-envelope pr-3"> </span>innocenttamunosiki@gmail.com</p>
+            </div>
+
+
+            <div class="col-xl-4">
+              <h3>Customer Care</h3>
+              <p>Contact us</p>
+              <p>Rooms and Rates</p>
+              <p>Facilities</p>
+            </div>
+
+
+            <div class="col-xl-4">
+              <h3>Facilities</h3>
+              <p>Spa and Gym</p>
+              <p>Restaurant</p>
+              <p>Bar</p>
+              <p>Cinema</p>
+            </div>
+
+            <div class="col-xl-12">
+            <i class="fa fa-facebook-f pr-3"></i>
+            <i class="fa fa-twitter pr-3"></i>
+            <i class="fa fa-linkedin"></i>
+              
+            </div>
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>

@@ -1,0 +1,236 @@
+nav{
+	background-color: #55a8ae
+}
+h1{
+	color: #55a8ae;
+	font-size: 70px;
+	text-align: center;
+}
+button{
+	font-size: 40px;
+	margin-top: 30px;
+	padding: 5px;
+	color: #e0e0d2;
+	border-style: none;
+	background-color: transparent;
+}
+.nav-link{
+	text-decoration: none;
+	color: #eef6f7 !important;
+	margin-right: 50px;
+	font-size: 25px;
+}
+
+.carousel-indicators li{
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	margin-bottom: 70px;
+	padding: 5px;
+}
+.carousel-indicators .active{
+	background-color: black;
+}
+.carousel-caption h1{
+	color: #eef6f7;
+	font-size: 90px;
+	margin-bottom: 40px;
+}
+.carousel-caption button{
+	border-color: #55a8ae;
+	color: #eef6f7;
+	background-color: #55a8ae;
+	border-radius: 20px;
+	margin-bottom: 130px;
+
+}
+.container-fluid-carousel{
+	padding: 0;
+	margin: 0;
+}
+.img-fluid{
+	width: 1500px;
+	height: 500px;
+}
+.jumbotron .row h1{
+	color: #55a8ae;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.jumbotron .row label{
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+
+input[type="date"]{
+	position: relative;
+	padding: 6px;
+	border: none;
+}
+input[type="date"]::-webkit-calendar-picker-indicator{
+	color: transparent;
+	background: none;
+	z-index: 1;
+}
+
+input[type="date"]:before{
+	position: absolute;
+	top: 11px;
+	right: 9px;
+	color: black;
+}
+.select{
+	border: none;
+	padding: 6px !important;
+}
+.jumbotron .row select{
+	padding: 3px;
+	margin-top: 0px;
+	width: 80px;
+}
+.jumbotron .row button{
+	border-color: #55a8ae;
+	color: #eef6f7;
+	background-color: #55a8ae;	
+	margin-top: 10px;
+	border-radius: 0px;
+	width: 270px;
+}
+
+ .rooms{
+	color: #55a8ae;
+	font-size: 70px;
+	margin-top: 10px;
+	margin-left: 300px;
+}
+.test{
+	margin-top: 30px;
+	text-align: center;
+}
+.pl-5{
+	padding-left: 6rem !important;
+}
+.contact-img{
+	padding-left: 6rem;
+	margin-left: 80px;
+	width: 565px;
+}
+.input-contact input{
+	margin-top: 15px;
+	margin-left: 100px;
+	padding: 10px;
+}
+.send{
+	border-style: none;
+	background-color: white !important;
+	width: 335px !important;
+	margin-left: 100px;
+}
+.facilities{
+	background: url(wall.jpg);	
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 20px;
+	margin-top: 10px;
+
+}
+.facilities img{
+	height: 150px;
+	width: 150px;
+	margin-left: 150px;
+	margin-top: 100px;
+}
+.facilities h3{
+	text-align: center;
+	margin-left: 35px;
+	margin-top: 10px;
+	color: white;
+}
+.contact{
+	color: #55a8ae;
+	text-align: center;
+	margin-left: 940px;
+}
+
+@media screen and (max-width: 600px){
+h1{
+	color: #55a8ae;
+	font-size: 32px;
+}
+.row{
+	margin-right: 0px !important;
+}
+.container-fluid .row img{
+	width: 450px;
+}
+.carousel-caption h1{
+	font-size: 32px;
+}
+.jumbotron .col-xm-12{
+	margin-top: 20px;
+}
+.rr h1{
+	font-size: 32px;
+	margin-left: 30px;
+}
+.rr button{
+	margin-top: 0px;
+	font-size: 25px;
+	margin-left: 130px;
+}
+.rr .col-sm-12{
+	padding-left: 18px !important;
+}
+.rr img{
+	padding-left: 0px !important;
+	margin: 0px;
+	width: 480px;
+}
+.arrows button{
+	margin-top: 0px;
+	margin-left: 130px;
+	font-size: 25px;
+}
+.container-fluid .row p{
+	font-size: 15px;
+}
+.rooms{
+	font-size: 40px;
+	margin-top: 20px;
+	margin-left: 25px;
+}
+.testimonial img{
+	margin-left: 180px !important;
+	height: 100px;
+	width: 100px !important;
+}
+.rounded-circle img{
+	height: 80px;
+	width: 80px;
+}
+.contact{
+	margin-left: 0px !important;
+}
+.contact-img{
+	padding-left: 0px !important;
+	margin-left: 0px;
+	width: 467px !important;
+}
+.contact-form{
+	margin-top: 20px !important;
+	padding-bottom: 60px;
+}
+.input-contact input{
+	margin-left: 40px;
+}
+.send{
+	margin-left: 40px;
+}
+.facilities{
+	background: url(wall.jpg);	
+	height: 100%;
+	width: 100%;	
+}
+}
