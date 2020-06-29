@@ -1,0 +1,137 @@
+.color{
+	color: #7b8bc7 !important;
+}
+.mt-7{
+	margin-top: 60px;
+}
+.img{
+	background-image: url("hotell.jpg");
+	padding-bottom: 3rem;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.logo{
+	margin-left: 25px;
+	margin-top: 15px;
+	font-size: 30px;
+}
+.active{
+	color: #7b8bc7;
+}
+a{
+	color: black;
+	font-style: bold;
+}
+.ml-7{
+	margin-left: 450px;
+	padding: 5px;
+	font-size: 20px;
+
+}
+
+.welcome{
+	color: #ffffff;
+	font-size: 80px;
+	text-align: center;
+	margin-top: 200px;
+}
+.luxury{
+	color: white;
+	text-align: center;
+	margin-top: 20px;
+}
+.fa-arrow-down{
+	color: white;
+	margin-left: 630px;
+	margin-top: 150px;
+	font-size: 50px;
+}
+
+.fa-calendar{
+	color: black;
+	background-color: #ebebe7;
+	border-style: none;
+	font-size: 35px;
+	padding: 5px;
+	margin-top: 20px;
+}
+.arrival{
+	color: black;
+	height: 40px;
+	width: 50%;
+	background-color: #ebebe7;
+	border-style: none;
+
+}
+
+.select{
+	font-style: bold;
+	border-style: none;
+	background-color: #ebebe7;
+	padding: 3px;
+	width: 40%;
+	height: 40px;
+}
+.select-icon{
+	border-style: none;
+	background-color: #ebebe7;
+	padding: 3px;
+	width: 20%;
+	height: 40px;
+}
+.hr{
+	border: 2px solid #7b8bc7;
+}
+.send{
+	border-style: none;
+	background-color: #7b8bc7;
+	color: white;
+	padding: 10px;
+	margin-top: 10px;
+	margin-left: 140px;
+	width: 25%;
+
+}
+
+.facilities img{
+	height: 90px;
+	width: 90px;
+	margin-left: 50px;
+	margin-top: -10px;
+}
+.facilities h3{
+	text-align: center;
+	margin-left: -55px;
+	margin-bottom: 30px;
+}
+
+/*contact us*/
+.text{
+	width: 250%;
+	height: 40px;
+	padding: 20px;
+}
+
+.book{
+	border-style: none;
+	background-color: #7b8bc7;
+	color: white;
+	padding: 7px;
+	margin-left: 95px;
+	margin-bottom: 7px;
+	width: 100px;
+}
+
+@media screen and (max-width: 600px){
+	.col-sm-12{
+		margin-bottom: 30px;
+	}
+	.mobile{
+		border: 2px dashed #7b8bc7;
+		width: 70%;
+	}
+	.navbar-nav{
+		margin-left: 0px;
+	}
+}
