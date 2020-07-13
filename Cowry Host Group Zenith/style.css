@@ -1,0 +1,254 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+#imageslider {
+    background: url(../img/background.png) no-repeat center top rgba(186, 186, 186, 0.31);
+    color: #ffffff;
+}
+
+.imageslideroverlay {
+    background: rgba(90, 64, 64, 0.8);
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.homeslide {
+    position: relative;
+}
+
+.slide-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carouselimage {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    opacity: 0.8;
+}
+
+.slide1 {
+    width: 100%;
+    height: 450px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url("img/comp1.webp") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide2 {
+    width: 100%;
+    height: 450px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("img/extension.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide3 {
+    width: 100%;
+    height: 450px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url("img/wordpress6.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide4 {
+    width: 100%;
+    height: 450px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url("img/security.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide-indicators {
+    padding-bottom: 40px;
+    border-radius: 50px;
+}
+
+.slide-indicators li {
+    padding: 15px;
+    background-color: rgba(255, 127, 80, 0.4);
+}
+
+.slide-indicators li.active {
+    background: rgba(255, 127, 80);
+}
+
+.slide-icon-left {
+    width: 400px;
+    margin: auto;
+    margin-top: 60px;
+    margin-left: 50px;
+    float: left;
+}
+
+.slide-icon-right {
+    width: 400px;
+    margin: auto;
+    margin-top: 60px;
+    margin-right: 50px;
+    float: right;
+}
+
+.slide-text-left {
+    width: 400px;
+    float: left;
+    margin: auto;
+    margin-top: 30px;
+    margin-left: 200px;
+}
+
+.slide-text-right {
+    float: right;
+    width: 400px;
+    margin: auto;
+    margin-top: 30px;
+    margin-right: 200px;
+}
+
+.landtext {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 200px !important;
+}
+
+.landhead {
+    background-color: rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    text-shadow: 2px 2px rgba(231, 39, 22);
+    color: rgba(255, 127, 80);
+    font-size: 35px !important;
+    font-weight: bold !important;
+    text-decoration: dotted;
+}
+
+.heads {
+    width: 100%;
+}
+
+.heads h1 {
+    width: 100%;
+    font-weight: bold;
+    color: rgba(255, 127, 80);
+    margin-top: 20px;
+}
+
+.underline {
+    padding: 2px;
+    width: 7rem;
+    background: rgba(255, 127, 80);
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.hostings {
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url("img/laptop.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+.hostlayer {
+    box-sizing: border-box;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
+
+.hostitem {
+    height: 100%;
+    background-color: rgba(245, 245, 245, 0.8);
+    border-radius: 30px;
+    padding: 15px 25px;
+    margin: 0 20px;
+}
+
+.hostnames {
+    margin-top: 10px;
+    color: rgba(107, 142, 35);
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.hostname {
+    display: none;
+}
+
+.hosting-d {
+    bottom: -10px;
+}
+
+.hosting {
+    bottom: 30px;
+}
+
+.hosting-v {
+    bottom: -10px;
+}
+
+.hosting p,
+.hosting-d p,
+.hosting-v p {
+    font-size: 20px;
+}
+
+h2 span {
+    position: relative;
+    display: inline-block;
+}
+
+
+/*Services*/
+
+@media (max-width: 600px) {
+    .slide-icon-right,
+    .slide-icon-left {
+        display: none;
+    }
+    .slide-text-right {
+        width: 55%;
+        margin-left: 10px!important;
+        margin-right: 80px!important;
+    }
+    .slide-text-left {
+        width: 55%;
+        margin-left: 80px!important;
+        margin-right: 10px!important;
+    }
+    .landhead {
+        background-color: rgba(0, 0, 0, 0.19);
+        border-radius: 20px;
+        text-shadow: 2px 2px rgba(231, 39, 22);
+        color: rgba(255, 127, 80);
+        font-size: 10px !important;
+        font-weight: bold !important;
+    }
+    .landtext {
+        margin: auto!important;
+        font-size: 9px!important;
+    }
+    .slide-indicators {
+        padding-bottom: 10px!important;
+        border-radius: 50px;
+    }
+    .hosting-d {
+        margin-bottom: 80px;
+    }
+    .hostnames {
+        display: none;
+    }
+    .hostname {
+        display: block;
+        margin-top: 10px;
+        color: rgba(107, 142, 35);
+        font-weight: bold;
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 991px) {}

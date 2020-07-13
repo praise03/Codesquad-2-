@@ -1,0 +1,191 @@
+.heads h1 {
+    animation: allheads 5s linear infinite;
+}
+
+@keyframes allheads {
+    50% {
+        transform: rotate(-5deg);
+        color: white;
+    }
+}
+
+.underline {
+    animation: underlinez 5s linear infinite;
+}
+
+@keyframes underlinez {
+    50% {
+        background: white;
+        transform: translateX(-35px);
+    }
+}
+
+.hostimg {
+    animation: hostimage 5s ease-in-out infinite;
+}
+
+@keyframes hostimage {
+    50% {
+        transform: rotate(-26deg) translateY(-5px);
+    }
+}
+
+.hostnames {
+    animation: hostnms 5s ease-in-out infinite;
+}
+
+@keyframes hostnms {
+    50% {
+        color: blue;
+    }
+}
+
+.hostname {
+    animation: hostnms 5s ease-in-out infinite;
+}
+
+@keyframes hostnms {
+    50% {
+        color: blue;
+    }
+}
+
+h2 span {
+    animation: bounce 5s ease infinite;
+}
+
+h2 span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+h2 span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+h2 span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+h2 span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+h2 span:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+h2 span:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+h2 span:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+h2 span:nth-child(9) {
+    animation-delay: 0.8s;
+}
+
+h2 span:nth-child(10) {
+    animation-delay: 0.9s;
+}
+
+h2 span:nth-child(11) {
+    animation-delay: 0.10s;
+}
+
+h2 span:nth-child(12) {
+    animation-delay: 0.11s;
+}
+
+@keyframes bounce {
+    100% {
+        top: -15px;
+    }
+}
+
+.pricenames {
+    animation: pricenms 5s ease-in-out infinite;
+}
+
+@keyframes pricenms {
+    50% {
+        color: rgba(107, 142, 35);
+    }
+}
+
+.services:hover {
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+@keyframes example {
+    from {
+        background-color: grey;
+        transform: scale(1.1, 1.1);
+    }
+    to {
+        background-color: white;
+    }
+}
+
+.landicn {
+    animation: landicon 2s ease-in-out infinite;
+}
+
+@keyframes landicon {
+    50% {
+        transform: scale(1.2, 1.2) rotate(-15deg);
+    }
+}
+
+
+/*.hosting-d {
+  animation: hostleft 3s 0s ease-out 1;
+}
+@keyframes hostleft {
+  0% {
+    transform: translate(-150px, 0px);
+  }
+  50% {
+    transform: translate(60px, 10px);
+    color: rgba(231, 39, 22, 0.8);
+    text-transform: uppercase;
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.hosting {
+  animation: hostcenter 3s 0s ease-out 1;
+}
+@keyframes hostcenter {
+  0% {
+    transform: translate(0px, 70px);
+  }
+  50% {
+    transform: translate(0px, -30px);
+    color: rgba(231, 39, 22, 0.8);
+    text-transform: uppercase;
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+.hosting-v {
+  animation: hostright 3s 0s ease-out 1;
+}
+@keyframes hostright {
+  0% {
+    transform: translate(150px, 0px);
+  }
+  50% {
+    transform: translate(-60px, 10px);
+    color: rgba(231, 39, 22, 0.8);
+    text-transform: uppercase;
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}

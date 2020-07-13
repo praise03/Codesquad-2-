@@ -1,0 +1,228 @@
+/* Imports font from Google Font */
+
+@import url("https://fonts.googleapis.com/css?family=Anton|Gugi|Lato|Roboto|Sofia& display=")
+/** Header Section **/
+
+.imagecard {}
+
+header {
+    background-color: rgb(236, 234, 234);
+}
+
+header .site-title {
+    font-family: var(--gugi);
+}
+
+.hat {
+    float: left;
+    display: inline-block;
+}
+
+.title-color {
+    text-transform: uppercase;
+    color: coral;
+}
+
+.search_my {
+    float: right;
+    border: 3px #000 solid;
+}
+
+.search1 {
+    border: none;
+    background-color: none;
+    width: 150px;
+    background-color: transparent;
+}
+
+.fa-facebook {
+    color: #3b5998;
+}
+
+.fa-linkedin {
+    color: #3b5998;
+}
+
+.fa-instagram {
+    color: #517fa4;
+}
+
+
+/** End of header Section **/
+
+
+/** Navigation Section **/
+
+.my-navbar .navbar-nav .active>.nav-link,
+.my-navbar .navbar-nav .nav-link.active,
+.my-navbar .navbar-nav .nav-link.show,
+.my-navbar .navbar-nav .show>.nav-link {
+    color: #fff;
+}
+
+.my-navbar .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.nav-light {
+    background-color: coral;
+}
+
+.nav1 {
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    padding: 0px;
+}
+
+.navbar-nav li {
+    z-index: 1;
+}
+
+.navbar-nav li a {
+    font-size: 17px;
+    color: black !important;
+    padding: 15px 60px !important;
+}
+
+.navbar-nav li a:hover {
+    border-right: 3px solid rgb(107, 142, 35);
+    border-left: 3px solid rgb(107, 142, 35);
+    transition: 0.5s all;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+}
+
+.fa-bars {
+    color: coral;
+}
+
+.nav-item .nav-link {
+    color: white;
+    font-size: 13px;
+    font-family: arial;
+    letter-spacing: 2px;
+    margin: 0px 10px;
+    text-transform: uppercase;
+}
+
+.nav-link.active,
+.nav-link:focus,
+.my-navbar .navbar .nav-link:hover {
+    color: #fff !important;
+}
+
+.mega-menu {
+    background-color: transparent;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    border: none;
+}
+
+.dropdown-item {
+    padding: 12px 40px 12px 20px;
+    font-size: 15px;
+    font-family: arial;
+    color: black;
+    font-weight: lighter;
+    background-color: white;
+    transform-origin: center;
+    animation: rotate 1.5s ease 1;
+}
+
+@keyframes rotate {
+    0% {
+        transform: perspective(600px) rotatey(90deg);
+        transform-origin: center;
+    }
+    100% {
+        transform: perspective(600px) rotatey(0deg);
+        transform-origin: center;
+    }
+}
+
+.dropdown-item:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+.dropdown-item:nth-of-type(2) {
+    animation-delay: 0.1s;
+}
+
+.dropdown-item:nth-of-type(3) {
+    animation-delay: 0.2s;
+}
+
+.dropdown-item:nth-of-type(4) {
+    animation-delay: 0.3s;
+}
+
+.dropdown-item:nth-of-type(5) {
+    animation-delay: 0.4s;
+}
+
+.dropdown-item:nth-of-type(6) {
+    animation-delay: 0.5s;
+}
+
+.dropdown-item:hover {
+    background-color: coral !important;
+    color: coral;
+}
+
+
+/** End of Navigation Section **/
+
+@media (max-width: 1200px) {
+    .navbar-nav li {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-toggler {
+        margin: 10px 0px 10px 30px !important;
+        border-color: coral !important;
+        border: solid 2px;
+    }
+    .navbar-toggler:hover,
+    .navbar-toggler:focus {
+        /**background-color: #fff!important; **/
+        border-color: #ff4f81;
+    }
+    .navbar-light {
+        background-color: coral !important;
+    }
+    .navbar-nav li a {
+        text-align: center;
+        background-color: aliceblue;
+    }
+    .navbar-nav li a:hover {
+        background-color: #ff4f81;
+    }
+    .icon {
+        display: none !important;
+    }
+}
+
+@media only screen and(max-width:767px) {
+    .navbar-toggler {
+        padding: 1px 5px;
+        font-size: 30px;
+        line-height: 0.3;
+        background: black;
+    }
+    .navbar-toggler-icon {
+        background-color: coral !important;
+        color: coral!important;
+        border-color: #000!important;
+    }
+}
