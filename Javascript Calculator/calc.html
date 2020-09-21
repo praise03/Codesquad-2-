@@ -1,0 +1,133 @@
+    <style>
+        @media only screen and (max-width: 900px)
+{
+    main
+    {
+        width: calc(100vw - 10px) !important;
+        min-height: calc(100vh - 10px) !important;
+        margin: 0 !important;
+    }
+}
+
+/*General*/
+body {
+    margin: 0 !important;
+    background-color: #1d1e22;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+::selection
+{
+    background-color: #ffffff;
+}
+
+main {
+    /*Structure*/
+    position: relative;
+    display: block;
+    min-width: 290px;
+    width: 60%;
+    /*min-height: 80vh;*/
+    margin: 0vh auto;
+    z-index: 0;
+    transform: scale(0.8);
+    /*Decoration*/
+    /*background-image: radial-gradient(#71ca67, #60ac58);*/
+    background-color: #ffffff;
+    border: 5px groove black;
+    border-radius: 5%;
+    box-shadow: 1vw 0 20px black, 
+        -1vw 0 20px black, 
+        0vw 1vh 20px black, 
+        0vw -1vh 20px black;
+}
+
+#bar {
+    /*Structure*/
+    position: absolute;
+    width: 90%;
+    height: 15vh;
+    margin: 5%;
+    z-index: 2;
+    overflow: auto;
+    overflow-y: hidden;
+    /*Decoration*/
+    background-color: #ffffff;
+    border: solid thin #002b00;
+    /*Text*/
+    text-align: right;
+    font-size: 10vh;
+    font-family: "Squada One", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    white-space: nowrap;
+}
+@keyframes equal-anim
+{
+    50%
+    {
+        background-color: black;
+    }
+}
+
+#buttons-area {
+    display: grid;
+    width: 100%;
+    height: 75%;
+    margin: 25vh 5% 5% 0%;
+}
+
+#basic-buttons-area
+{
+    /*Structure*/
+    display: grid;
+    grid-template-areas: 
+        "num1 num2 num3 plus"
+        "num4 num5 num6 minus"
+        "num7 num8 num9 mul"
+        "cls num0 del div"
+        ". . eql .";
+}
+.basic-button
+{
+    /*#1d1e22*/
+    /*Structure*/
+    margin: 5% auto 0 auto;
+    width: 80%;
+    /*Text*/
+    font-size: 4em;
+    /*Decoration*/
+    border: #ebebe7 3px groove;
+    background-color: white;
+}
+.basic-button:active
+{
+    animation: 250ms activate-anim forwards;
+}
+@keyframes activate-anim
+{
+    50%
+    {
+        background-color: rgba(0, 0, 0, 0.20)
+    }
+}
+    </style>
+
+    <main id="main">
+        <text id="bar" style='font-size: 50px;'>Type in a Number to Start...</text>
+        <div id="buttons-area">
+            <div id="basic-buttons-area">
+                <button class="basic-button" id="clear" onclick="Clear();" style="grid-area: cls;"> C</button>
+                <button class="basic-button" onclick="ChangeValue(0)" style="grid-area: num0;"> 0</button>
+                <button class="basic-button" id="backspace" onclick="Backspace();" style="grid-area: del;"> &lArr; </button>
+                <button class="basic-button" onclick="ChangeValue('+')" style="grid-area: plus;">+</button>
+                <button class="basic-button" onclick="ChangeValue('*')" style="grid-area: mul">&times;</button>
+                <button class="basic-button" onclick="ChangeValue('-')" style="grid-area: minus;">-</button>
+                <button class="basic-button" onclick="ChangeValue('/')" style="grid-area: div;">&divide;</button>
+                <button class="basic-button" onclick="Solve();" style="grid-area: eql; margin-left: -35%;" id="eql_button"> = </button>
+
+            </div>
+        </div>
+    </main>
+
+
+    <script src='calc.js'></script>

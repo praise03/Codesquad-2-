@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Slick Playground</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="./slick/slick.css">
+<link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment-with-locales.min.js" integrity="sha512-kcvf1mExE8WCOLBL5re/9hLUHfaj8+LQrKlupTarmme+rwv8asLK4q6Ge32trTMBElPBP5sll4czZKNvps0VvA==" crossorigin="anonymous"></script>
+
+<style type="text/css">
+	body {
+	  font-family: 'liquid_crystalregular', sans-serif;
+	  user-select: none;
+	  user-drag: none;
+	  height: 100%;
+	  background-image: url("./globe.jpg");
+	  background-color: coral;
+	  opacity: 1;
+	} 
+	.clock {
+	  height: 100px;
+	  width: 70%;
+	  line-height: 100px;  
+	  margin: 150px auto 0;
+	  padding: 0 50px;
+	  background: #222;
+	  color: #eee;
+	  text-align: center;
+	  border-radius: 15px;
+	  box-shadow: 0 0 7px #222;
+	  opacity: 1 !important;
+	  text-shadow: 0 0 3px #fff;
+	}
+  	.slider {
+        width: 50%;
+        margin: 100px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+    
+    .slick-active {
+      opacity: .5;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+  </style>
+</style>
+<body>	
+
+
+<!--   <section class="vertical-center slider">
+    <div>
+      <img src="http://placehold.it/350x100?text=1">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=2">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=3">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=4">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=5">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=6">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=7">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=8">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=9">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x100?text=10">
+    </div>
+  </section> -->
+
+
+  <section class="lazy slider">
+    <div>
+    	<div id="clock" class="clock">loading ...</div>
+    </div>
+    <div>
+      <canvas id="canvas" width="400" height="400" style="background-color:#333; border-radius: 50px; margin-left: 130px;"></canvas>
+    </div>
+  </section>
+
+
+<!-- Wall Clock Javascript Code -->
+<script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var radius = canvas.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+setInterval(drawClock, 1000);
+
+function drawClock() {
+  drawFace(ctx, radius);
+  drawNumbers(ctx, radius);
+  drawTime(ctx, radius);
+}
+
+function drawFace(ctx, radius) {
+  var grad;
+  ctx.beginPath();
+  ctx.arc(0, 0, radius, 0, 2*Math.PI);
+  ctx.fillStyle = 'white';
+  ctx.fill();
+  grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+  grad.addColorStop(0, '#333');
+  grad.addColorStop(0.5, 'white');
+  grad.addColorStop(1, '#333');
+  ctx.strokeStyle = grad;
+  ctx.lineWidth = radius*0.1;
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+  ctx.fillStyle = '#333';
+  ctx.fill();
+}
+
+function drawNumbers(ctx, radius) {
+  var ang;
+  var num;
+  ctx.font = radius*0.15 + "px arial";
+  ctx.textBaseline="middle";
+  ctx.textAlign="center";
+  for(num = 1; num < 13; num++){
+    ang = num * Math.PI / 6;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.85);
+    ctx.rotate(-ang);
+    ctx.fillText(num.toString(), 0, 0);
+    ctx.rotate(ang);
+    ctx.translate(0, radius*0.85);
+    ctx.rotate(-ang);
+  }
+}
+
+function drawTime(ctx, radius){
+    var now = new Date();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var second = now.getSeconds();
+    //hour
+    hour=hour%12;
+    hour=(hour*Math.PI/6)+
+    (minute*Math.PI/(6*60))+
+    (second*Math.PI/(360*60));
+    drawHand(ctx, hour, radius*0.5, radius*0.07);
+    //minute
+    minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+    drawHand(ctx, minute, radius*0.8, radius*0.07);
+    // second
+    second=(second*Math.PI/30);
+    drawHand(ctx, second, radius*0.9, radius*0.02);
+}
+
+function drawHand(ctx, pos, length, width) {
+    ctx.beginPath();
+    ctx.lineWidth = width;
+    ctx.lineCap = "round";
+    ctx.moveTo(0,0);
+    ctx.rotate(pos);
+    ctx.lineTo(0, -length);
+    ctx.stroke();
+    ctx.rotate(-pos);
+}
+</script>
+
+<!-- Moment.js Digitl Clock -->
+<script>
+	// document.getElementById('clock').fitText(1.3)		
+	function update() {
+	  $('#clock').html(moment().format('D. MMMM YYYY H:mm:ss'));
+	}
+
+	setInterval(update(), 1000);
+</script>
+
+
+<!-- Slick.js Slider -->
+<script type="text/javascript">
+    $(document).on('ready', function() {
+      $(".vertical-center-4").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+        slidesToShow: 4,
+        slidesToScroll: 2
+      });
+      $(".vertical-center-3").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+      $(".vertical-center-2").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+        slidesToShow: 2,
+        slidesToScroll: 2
+      });
+      $(".vertical-center").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+      });
+      $(".vertical").slick({
+        dots: true,
+        vertical: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+      $(".regular").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+      $(".center").slick({
+        dots: true,
+        infinite: true,
+        centerMode: true,
+        slidesToShow: 5,
+        slidesToScroll: 3
+      });
+      $(".variable").slick({
+        dots: true,
+        infinite: true,
+        variableWidth: true
+      });
+      $(".lazy").slick({
+        lazyLoad: 'ondemand', 
+        infinite: true
+      });
+    });
+    </script>
+</body>
+</head>
+</html>
